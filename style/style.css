@@ -1,0 +1,603 @@
+@import url(../style/font.css);
+
+/* Umumiy resetlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Bosh sahifa fon rangi va shrift */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Umumiy resetlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Umumiy resetlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Headerni layout qilish */
+header {
+    display: flex;
+    justify-content: space-between;
+    /* Chap va o'ng tomonlar uchun joy */
+    align-items: center;
+    background-color: #1e2a47;
+    /* Maktabning rangi */
+    color: white;
+    padding: 10px 20px;
+    position: relative;
+    /* Posiion qo'yish orqali header o'zgarishlar amalga oshiriladi */
+}
+
+/* Logo va maktab nomi uchun qism */
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
+    /* Logoning o'lchamini moslash */
+    height: auto;
+    margin-right: 15px;
+    /* Logo va nom orasidagi bo'shliq */
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: 300;
+    line-height: 1.4;
+    /* Qatorlar orasidagi bo'shliq */
+    text-align: center;
+    /* Matnni markazlashtirish */
+}
+
+h1 span {
+    display: block;
+    /* span elementlarini blok qilib chiqarish */
+
+}
+
+.city {
+    font-size: 1.6em;
+    /* "Sirdaryo viloyati Guliston shahar" uchun kattaroq o'lcham */
+    font-weight: 400;
+    color: white;
+    /* Rangni sozlash */
+}
+
+.school {
+    font-size: 1.5em;
+    /* "16-sonli umumta'lim maktabi" uchun kichikroq o'lcham */
+    font-weight: 300;
+    color: white;
+    /* Rangni sozlash */
+}
+
+
+/* O'ng tomondagi qidirish va telefon */
+.header-right {
+    display: flex;
+    align-items: center;
+    /* Vertikal markazlash */
+    justify-content: flex-end;
+    /* Elementlarni o'ngga joylashtirish */
+    padding: 10px;
+    /* Ichki bo'shliq */
+}
+
+/* Qidirish maydoni va ikonasi */
+.search-container {
+    display: flex;
+    align-items: center;
+    /* Ikonalar va matnni vertikal markazlash */
+    margin-right: 20px;
+    /* Qidirish maydoni va telefon orasidagi bo'shliq */
+}
+
+.search-container input[type="text"] {
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* Burchaklarni yumshatish */
+    outline: none;
+    /* Fokusda outline olib tashlanadi */
+    width: 220px;
+    /* Qidirish maydonining kengligi */
+}
+
+/* Qidirish ikonasining stili */
+.search-container i {
+    font-size: 1.5em;
+    /* Ikonalarni kattalashtirish */
+    color: #007bff;
+    /* Ikonalar rangi */
+    margin-left: 10px;
+    /* Ikona va matn orasidagi bo'shliq */
+}
+
+/* Telefon raqami */
+.phone-container {
+    display: flex;
+    align-items: center;
+    /* Ikona va matnni vertikal markazlash */
+}
+
+.phone {
+    font-size: 1.2em;
+    color: white;
+    /* Telefon raqami rangi */
+    text-decoration: none;
+    /* Linkni dekoratsiyalash */
+    margin-right: 10px;
+    /* Telefon raqami va ikona orasidagi bo'shliq */
+}
+
+.phone span {
+    color: white;
+    /* Telefon raqami matni rangi */
+    font-weight: bold;
+    /* Raqamni ajratish uchun qalin qilish */
+}
+
+/* Telefon ikonasining stili */
+.phone-container i {
+    font-size: 1.5em;
+    /* Ikonalarni kattalashtirish */
+    color: #007bff;
+    /* Ikonalar rangi */
+    margin-left: 5px;
+    /* Ikona va telefon raqami orasidagi bo'shliq */
+}
+
+/* Hover effektlari */
+.phone-container a:hover {
+    text-decoration: underline;
+    /* Telefon raqamiga hover qilganda pastki chiziq qo'shish */
+}
+
+.search-container input[type="text"]:focus {
+    border-color: #007bff;
+    /* Fokus holatida qidirish maydonining chegarasi ko'k rangga o'zgaradi */
+}
+
+
+/* Navigatsiya menyusi pastda joylashadi */
+nav {
+    background-color: #354976;
+    /* Menyuning fon rangi */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover effekti */
+nav ul li a:hover {
+    background-color: #4c70af;
+    transform: translateY(-2px);
+    /* Hover qilganda elementni biroz ko'tarish */
+}
+
+/* Dropdown menyu */
+nav ul li ul {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    /* Dropdown menyu pastga tushadi */
+    left: 0;
+    background-color: rgba(93, 117, 140, 0.9);
+    /* Shafof fon */
+    display: none;
+    /* Boshida yashirish */
+    width: 180px;
+    /* Kichikroq kenglik */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover qilinganda dropdown menyu ko'rsatiladi */
+nav ul li:hover>ul {
+    display: block;
+}
+
+nav ul li ul li {
+    border-bottom: 1px solid #444;
+    font-size: 0.95em;
+    /* Kichikroq shrift hajmi */
+}
+
+nav ul li ul li:last-child {
+    border-bottom: none;
+    /* So'nggi elementda chiziqni olib tashlash */
+}
+
+nav ul li ul li a {
+    padding: 10px 18px;
+    /* Kichikroq padding */
+    font-size: 1em;
+    /* Kichikroq shrift */
+    color: #ddd;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effekti */
+nav ul li ul li a:hover {
+    background-color: #4c78af;
+    color: white;
+}
+
+
+/* Background image uchun qism */
+.background-image {
+    background-image: url('../img/fon.jpg');
+    /* Rasmni fon sifatida ishlatish */
+    background-size: cover;
+    /* Rasmni to'liq ekran hajmiga moslashtirish */
+    background-position: center;
+    height: 400px;
+    /* Rasmni balandligini belgilash */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Umumiy container uchun uslublar */
+.header-block {
+    background-color: #f4f4f9;
+    padding: 50px 20px;
+}
+
+.info-blocks {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Har bir blok uchun uslub */
+.block {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Ikona uslubi */
+.icon {
+    font-size: 60px;
+    color: #4A90E2;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.block:hover .icon {
+    color: #D84C4C;
+    /* Hover holatida rang o'zgaradi */
+}
+
+/* Sarlavha uslubi */
+h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Ta'rif uslubi */
+p {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.5;
+}
+
+
+
+/* main-end section */
+
+/* O'ng va Chap qismlar */
+.main-end {
+    display: flex;
+    justify-content: space-between;
+    /* Chap va o'ng qismlar o'rtasida bo'sh joy qoldiradi */
+    gap: 30px;
+    /* Chap va o'ng qismlar orasidagi masofa */
+    padding: 20px;
+}
+
+/* Chap tomon - Maktab direktori va e'lonlar */
+.left-section {
+    width: 35%;
+    /* Chap tomonni toraytirish */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Maktab direktori */
+.director {
+    text-align: center;
+
+}
+
+.director-img {
+    width: 100%;
+    height: auto;
+    max-width: 120px;
+    border-radius: 10px;
+    /* Burchaklarni yumshatish uchun */
+}
+
+.director-info {
+    border-left: 4px solid #007bff;
+    margin-left: 10px;
+    /* Yuqori chiziq */
+}
+
+.director h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.director p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* E'lonlar ro'yxati */
+.links ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 50px;
+}
+
+.links ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-left: 25px;
+    /* Icnorlar bilan matnni ajratish uchun */
+}
+
+.links ul li a {
+    font-size: 1.1em;
+    /* Linklarni biroz kattalashtirish */
+    color: #000000;
+    text-decoration: none;
+    margin-bottom: 5px;
+    
+}
+
+.links ul li a:hover {
+    text-decoration: underline;
+}
+
+.link-description {
+    font-size: 1em;
+    color: #666;
+    margin-top: 5px;
+    line-height: 1.5;
+    padding-left: 15px;
+}
+
+/* Har bir bo'limni tagdan chiziq bilan ajratish */
+.links ul li .divider {
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Ikonalar */
+.links ul li i {
+    font-size: 2em;
+    /* Iconkalar o'lchamini kattalashtirish */
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+
+
+/* O'ng tomon: Yangiliklar */
+.right-section {
+    width: 60%;
+    /* O'ng tomonni kengroq qilish */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Yangiliklar elementlari */
+.news-item {
+    display: flex;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.news-img {
+    width: 150px;
+    /* Kichikroq rasm o'lchami */
+    height: 150px;
+    margin-right: 15px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.news-info h3 {
+    font-size: 1.1em;
+    /* Sarlavha o'lchamini kichikroq qilish */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.news-info p {
+    font-size: 0.9em;
+    /* Matn o'lchamini kichikroq qilish */
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.read-more {
+    font-size: 1em;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.date {
+    font-size: 0.9em;
+    color: #777;
+}
+
+
+
+/* footer qismi */
+
+
+
+/* Footer umumiy uslublar */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer konteyneri */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+/* Footer bo'limlarini sozlash */
+.footer-section {
+    width: 30%;
+    padding: 10px;
+    }
+
+.footer-section h4 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+/* Footer matnlarini va havolalar */
+.footer-section p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+/* Footer oxirgi qismini ajratish */
+.footer-bottom {
+    text-align: center;
+    font-size: 0.8em;
+    background-color: #222;
+    padding: 10px 0;
+  
+}
+
+/* Email input va button */
+footer form {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer input[type="email"] {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+footer button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer button:hover {
+    background-color: #0056b3;
+}
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+   }   
